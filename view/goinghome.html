@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SpaceX - Going Home</title>
+   <link type="text/css" href="../style/goinghome.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+   <link rel="icon" href="../images/shuttle.png">
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>   
+   <script type="text/javascript" src="../script/goinghome.js" defer></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+
+  </head>
+
+  <body>
+	<div class="container">
+
+   	 <div class="header">
+  		<figure>
+    	  <a href="../index.html"><img id="logo" src="../images/logo.png" alt="space x logo"></a>
+   		 </figure>
+
+   		 <nav class="navbar">
+   		 	<div class="hamburger-menu">
+   		 		<div class="line line-1"></div>
+   		 		<div class="line line-2"></div>
+   		 		<div class="line line-3"></div>
+   		 	</div>
+
+   		    <ul class="nav-list">
+   		     <li class="nav-item"><a href="../index.html" class="nav-link">Dashboard</a></li>
+   		     <li class="nav-item"><a href="../view/stats.html" class="nav-link">Statistics </a></li>
+   		     <li class="nav-item"><a href="../view/facts.html" class="nav-link">Facts</a></li>
+   		     <li class="nav-item"><a href="../view/goinghome.html" class="nav-link">Going Home</a></li>   
+   		    </ul>
+
+   		 </nav>
+ 		
+    </div>
+
+    <div class="content">
+
+      <div class="intro">
+      	<h1>Time to go home</h1>
+      	<p>The jourey home is gonna be a long one</p>
+      </div>
+
+      <div class="map">
+       <h2>Where are we going?</h2>
+       <p>We've scouted out some ideal landingspots for you to choose from!</p>
+       <button id="b1">The Netherlands</button>
+       <button id="b2">Namibia</button>
+       <button id="b3">Curacao</button>
+       <button id="b4">New Zealand</button>
+       <button id="b5">Indonesia</button>
+       <button id="b6">USA</button> 
+       <div id="map"></div>
+      </div>
+
+      <div id="weer">
+      	<h2>Should I bring an umbrella?</h2>
+      	<div id="weather" class="weather"></div>
+      </div>
+
+      <div class="music">
+      	<h2>Gotta have some bangers</h2>
+      	<p>What's a road trip without music?</p>
+      	<div class="grid-container">
+      	<div class="playlist">
+      		<iframe id="playlist1" src="https://open.spotify.com/embed/playlist/2kXUfQNkObijQTMMpcgf5Z" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      	</div>
+      	<div class="playlist">
+      		<iframe id="playlist2" src="https://open.spotify.com/embed/playlist/2SLY7rbDGbOYzhAaDpmVHR" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      	</div>
+      	<div class="playlist">
+      		<iframe id="playlist3" src="https://open.spotify.com/embed/playlist/6u1kiddeY2z0xWuCPKW6RR"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      	</div>
+      </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+/* reset */
+
+body,p,a,ul,li {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+}
+
+/* fonts */
+
+h1, h2, h3, a , p, table{
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+/* base styles */
+
+body {
+	background: url("space.jpg") center repeat #181511;
+	background-size: cover;
+
+}
+#logo {
+	width: 200px;
+	margin: 20px;
+}
+
+/*hamburger menu stuff*/
+
+.navbar {
+	width: 250px;
+	height: 100%;
+	background-color: #181511;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	display: flex;
+	justify-content: center;
+	transition: right .8s cubic-bezier(1,0,0,1);
+		z-index: 1;
+
+}
+
+.change {
+	right: 0;
+}
+.hamburger-menu {
+	width: 35px;
+	height: 30px;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	z-index: 1;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #707070;
+	transition: all 0.8s;
+}
+.change .line-1 {
+	transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2 {
+	opacity: 0;
+}
+.change .line-3 {
+	transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+	text-align: right;
+	padding-top: 90px;
+}
+
+.nav-item {
+	margin: 25px;
+}
+.nav-link {
+	font-size: 22px;
+	color: #707070;
+	font-weight: 300;
+	letter-spacing: 1px;
+	position: relative;
+}
+.nav-link:hover {
+	font-size: 150%;
+	color: #E9EDEA;
+}
+
+/*clock*/
+
+.clock {
+  width: 200px;
+  padding-left: px;
+  text-align: center;
+  border-radius: 10px;
+}
+#date {
+	font-size: 30px;
+}
+
+.clock-time,
+.clock-ampm {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  color: #181511;
+}
+
+.clock-time {
+  font-size: 48px;
+}
+
+/*welcome message*/
+
+#col-1{
+	color: #0764B0;
+	font-size: 25px;
+	margin: 30px;
+}
+
+/*Time image*/
+.day-image {
+	margin-left: 30px;
+	padding-top: 20px;
+}
+
+#sun {
+animation: rotation 8s infinite linear;
+padding: 0;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+h2 {
+	font-weight: lighter;
+	font-size: 25px;
+}
+/* table*/
+#first, #second {
+	margin-left: 10px;
+	margin-bottom: 30px;
+
+}
+#second {
+	color: #0764b0;
+}
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+	width: 300px;
+}
+.tg td{
+	border-color:black;
+	border-style:none;
+	border-width:1px;
+	font-family:'Nunito Sans', sans-serif;
+	font-size:14px;
+    overflow:hidden;
+    padding:5px 9px;
+    word-break:normal;
+}
+.tg th{
+	border-color:black;
+	border-style:none;
+	border-width:1px;
+	font-family:'Nunito Sans', sans-serif;
+	font-size:10px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:5px 9px;
+    word-break:normal;
+}
+.tg .tg-c3ow{
+	border-color:inherit;
+	text-align:center;
+	vertical-align:top
+}
+.tg .tg-0lax{
+	text-align:left;
+	vertical-align:top
+}
+
+/* sign up button */
+
+.myButton {
+	background:#0764B0;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Nunito Sans', sans-serif;
+	font-size:20px;
+	padding:13px 33px;
+	text-decoration:none;
+	margin: 25px 0 25px 10px;
+	transform: scale(1);
+    animation: pulse-black 2s infinite;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #0764B0 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* other stuff*/
+.activities-container, footer, #test, .announce, .welcome {
+	width: 90%;
+	background-color: #E9EDEA;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 15px;
+}
+.activities-container{
+	padding-left: -20px;
+}
+#date {
+	margin-bottom: 20px;
+}
+#test {
+	height: 125px;
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+}
+
+footer {
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 15px;
+	opacity: 50%;
+}
+
+.morning, .afternoon, .evening { background-repeat: no-repeat;
+transition: background 1s ease-in-out; 
+}
+
+.morning {
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(241,234,185,1) 0%, rgba(255,163,88,1) 100%);
+}
+
+.afternoon{
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,183,255,1) 0%, rgba(255,255,199,1) 100%);
+}
+
+.evening{
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,141,145,1) 0%, rgba(29,54,121,1) 100%); 
+}
+
+/* tablet styles */
+
+@media screen and (min-width:750px){
+.content {
+	display: grid;
+	grid-column: 1fr 1fr;
+	grid-template-areas: 
+	"time greet"
+	"board activity"
+}
+#grid1{
+	grid-area: greet;
+}
+#test {
+	grid-area: time;
+}
+#grid2 {
+	grid-area: board;
+}
+#grid3 {
+	grid-area: activity;
+}
+footer {
+	width: 95%;
+}
+
+/* laptop styles */
+
+@media screen and (min-width:1000px){
+
+.content {
+	display: grid;
+	grid-column: 1fr 1fr;
+	grid-template-areas: 
+	"greet activity"
+	"time activity"
+	"board activity"
+ }
+.tg {
+	width: 95%;
+}
+.myButton {
+
+}
+}
+
+/* Large screen styles */
+
+@media screen and (min-width:1200px){
+
+
+}

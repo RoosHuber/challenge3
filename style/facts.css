@@ -1,0 +1,170 @@
+/* reset */
+
+body,p,a,ul,li {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+}
+
+/* fonts */
+
+h1, h2, h3, a , p, table{
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+/* base styles */
+
+body {
+	background: url("space.jpg") center repeat #181511;
+	background-size: cover;
+
+}
+#logo {
+	width: 200px;
+	margin: 20px;
+}
+
+/*hamburger menu stuff*/
+
+.navbar {
+	width: 250px;
+	height: 100%;
+	background-color: #181511;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	display: flex;
+	justify-content: center;
+	transition: right .8s cubic-bezier(1,0,0,1);
+}
+
+.change {
+	right: 0;
+}
+.hamburger-menu {
+	width: 35px;
+	height: 30px;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #707070;
+	transition: all 0.8s;
+}
+.change .line-1 {
+	transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2 {
+	opacity: 0;
+}
+.change .line-3 {
+	transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+	text-align: right;
+	padding-top: 90px;
+}
+
+.nav-item {
+	margin: 25px;
+}
+.nav-link {
+	font-size: 22px;
+	color: #707070;
+	font-weight: 300;
+	letter-spacing: 1px;
+	position: relative;
+}
+.nav-link:hover {
+	font-size: 150%;
+	color: #E9EDEA;
+}
+
+/*Factboxes*/
+.factbox1, .factbox2, .factbox3, .factbox4, .factbox5, .factbox6, .factbox7 {
+	width: 90%;
+	background-color: #E9EDEA;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 15px;
+}
+
+#fact {
+	width:100%;
+}
+
+
+/* tablet styles */
+
+@media screen and (min-width:750px){
+
+
+
+/* laptop styles */
+
+@media screen and (min-width:1000px){
+
+#factbox1{
+	grid-area: atmosphere;
+}
+#factbox2{
+	grid-area: distance;
+}
+#factbox3 {
+	grid-area: gravity;
+}
+#factbox4 {
+	grid-area: years;
+}
+#factbox5 {
+	grid-area: mass;
+}
+#factbox6 {
+	grid-area: moons;
+}
+#factbox7 {
+	grid-area: structure;
+}
+.content {	
+	display: grid;
+	grid-column: 1fr 1fr;
+	grid-row: auto;
+	grid-template-areas: 
+	"atmosphere distance"
+	"gravity years"
+	"mass structure"
+	"moons . "
+ }
+
+}
+}
+
+/* Large screen styles */
+
+@media screen and (min-width:1200px){
+ .content {	
+	display: grid;
+	grid-column: 1fr 1fr 1fr;
+	grid-row: auto;
+	grid-template-areas: 
+	"atmosphere distance gravity"
+	
+	" years mass structure"
+	" . moons . "
+ }
+
+}

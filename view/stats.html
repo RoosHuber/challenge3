@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SpaceX - Statistics</title>
+   <link type="text/css" href="../style/stats.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+   <link rel="icon" href="../images/shuttle.png">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+   <script type="text/javascript" src="../script/stats.js" defer></script>
+
+  </head>
+
+  <body>
+	<div class="container">
+
+   	 <div class="header">
+  		<figure>
+    	  <a href="../index.html"><img id="logo" src="../images/logo.png" alt="space x logo"></a>
+   		 </figure>
+
+   		 <nav class="navbar">
+   		 	<div class="hamburger-menu">
+   		 		<div class="line line-1"></div>
+   		 		<div class="line line-2"></div>
+   		 		<div class="line line-3"></div>
+   		 	</div>
+
+   		    <ul class="nav-list">
+   		     <li class="nav-item"><a href="../index.html" class="nav-link">Dashboard</a></li>
+   		     <li class="nav-item"><a href="../view/stats.html" class="nav-link">Statistics </a></li>
+   		     <li class="nav-item"><a href="../view/facts.html" class="nav-link">Facts</a></li>
+   		     <li class="nav-item"><a href="../view/goinghome.html" class="nav-link">Going Home</a></li>   
+   		    </ul>
+
+   		 </nav>
+ 		
+    </div>
+
+    <div class="content">
+
+      <div class="map" id="one">
+        <img id="earth" src="../images/planet-earth.png" alt="Earth">
+        <img id="ship" src="../images/mf.png" alt="Spaceship">
+        <img id="mars" src="../images/mars.png" alt="Mars">
+      </div>
+
+      <div class="chart" id="two">
+        <canvas id="chart1"></canvas>
+      </div>
+
+      <div class="chart" id="three">
+        <canvas id="chart2"></canvas>
+      </div>
+
+      <div class="chart" id="four">
+        <canvas id="chart3"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+  
+    <footer>
+    <h3>Art credits</h3>
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <!-- <img id="avatar" src="images/planet-earth.png">
+       <img id="avatar" src="images/jupiter.png"> -->  
+    
+  
+   </footer>
+</body>
+</html>

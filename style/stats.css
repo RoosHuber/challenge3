@@ -1,0 +1,224 @@
+/* reset */
+
+body,p,a,ul,li {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+.container {
+	width: 100%;
+
+}
+
+/* fonts */
+
+h1, h2, h3, a , p, table{
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+/* base styles */
+
+body {
+	background: url("space.jpg") center repeat #181511;
+	background-size: cover;
+
+}
+#logo {
+	width: 200px;
+	margin: 20px;
+}
+
+/*hamburger menu stuff*/
+
+.navbar {
+	width: 250px;
+	height: 100%;
+	background-color: #181511;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	display: flex;
+	justify-content: center;
+	transition: right .8s cubic-bezier(1,0,0,1);
+	    z-index: 1;
+}
+
+.change {
+	right: 0;
+}
+.hamburger-menu {
+	width: 35px;
+	height: 30px;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #707070;
+	transition: all 0.8s;
+}
+.change .line-1 {
+	transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2 {
+	opacity: 0;
+}
+.change .line-3 {
+	transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+	text-align: right;
+	padding-top: 90px;
+}
+
+.nav-item {
+	margin: 25px;
+}
+.nav-link {
+	font-size: 22px;
+	color: #707070;
+	font-weight: 300;
+	letter-spacing: 1px;
+	position: relative;
+}
+.nav-link:hover {
+	font-size: 150%;
+	color: #E9EDEA;
+}
+
+/*Charts*/
+.chart, .map, footer {
+
+	background-color: #E9EDEA;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 15px;
+
+}
+
+.map {
+	background: url("spacy.jpg") center repeat #181511; 
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+#earth, #mars, #ship {
+	width: 75px;
+}
+#earth, #mars {
+	height:75px;
+	padding-top: 15px;
+}
+#earth {
+	margin-left: 20px;
+}
+#mars {
+	margin-right: 20px;
+}
+
+#ship {
+	margin-top: 20px;
+
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 10s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(100% - 100px);
+    -webkit-transform: rotateY(180deg); 
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+footer {
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 15px;
+	opacity: 50%;
+}
+
+/* tablet styles */
+
+@media screen and (min-width:750px){
+
+
+
+/* laptop styles */
+
+@media screen and (min-width:1000px){
+#one{
+	grid-area: map
+}
+#two{
+	grid-area: water;
+}
+#three {
+	grid-area: captured;
+}
+#four {
+	grid-area: air;
+}
+.content {
+	display: grid;
+	grid-column: 1fr 1fr;
+	grid-row: auto;
+	grid-template-areas: 
+	"map map"
+	"water captured"
+	"air . "
+ }
+
+}
+
+}
+
+/* Large screen styles */
+
+@media screen and (min-width:1200px){
+.content {
+	display: grid;
+	grid-column: 1fr 1fr 1fr;
+	grid-row: auto;
+	grid-template-areas: 
+	"map map map"
+	"water captured air"
+
+ }
+.map {
+    height: 200px;
+}
+#earth, #mars, #ship {
+	width: 100px;
+}
+#earth, #mars {
+	height:100px;
+	padding-top: 40px;
+}
+#ship {
+	width: 125px;
+	margin-top: 50px;
+}
+}
